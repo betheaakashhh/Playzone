@@ -1,5 +1,18 @@
 # PLAYZONE
 
+<!-- readme-sync-bot:toc:start -->
+## Table of Contents
+
+- [Stack](#stack)
+- [Features](#features)
+- [Run locally](#run-locally)
+- [Docker](#docker)
+- [First admin](#first-admin)
+- [Important product/compliance note](#important-productcompliance-note)
+- [V1.1 tournament engine](#v11-tournament-engine)
+- [📋 Recommended Sections Checklist](#-recommended-sections-checklist)
+<!-- readme-sync-bot:toc:end -->
+
 Daily competitive social gaming platform MVP.
 
 ## Stack
@@ -49,7 +62,6 @@ For development, create a normal user and promote its `role` field to `ADMIN` in
 ## Important product/compliance note
 The MVP does not implement collection of player entry fees or redistribution of a pooled cash pot. Before enabling any paid-entry/prize mechanics, obtain India-specific legal/compliance review for the exact game, tournament rules, funding source, payment flow, age/KYC requirements, and applicable online-gaming/payment rules.
 
-
 ## V1.1 tournament engine
 
 - Admin-only tournament start action.
@@ -66,3 +78,16 @@ The MVP does not implement collection of player entry fees or redistribution of 
 
 ### Important
 Paid-entry and cash-prize functionality remains disabled by design until the exact tournament format and payment/prize model receive appropriate legal/compliance review.
+
+<!-- readme-sync-bot:checklist:start -->
+## 📋 Recommended Sections Checklist
+
+_The bot can't write these automatically — they need your judgment, not a diff. This list updates itself as you add them:_
+
+- [ ] License
+- [ ] Author / Contact
+- [ ] Contributing Guidelines
+- [ ] Acknowledgements
+- [ ] Testing
+- [ ] Deployment
+<!-- readme-sync-bot:checklist:end -->
