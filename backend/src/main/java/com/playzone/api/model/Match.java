@@ -16,6 +16,8 @@ public class Match {
   private String reportedBy;
   private String disputeReason;
   private Instant scheduledAt;
+  private int round;
+  private int position;
   public String getId(){return id;} public void setId(String v){id=v;}
   public String getTournamentId(){return tournamentId;} public void setTournamentId(String v){tournamentId=v;}
   public String getPlayer1Id(){return player1Id;} public void setPlayer1Id(String v){player1Id=v;}
@@ -26,4 +28,6 @@ public class Match {
   public String getReportedBy(){return reportedBy;} public void setReportedBy(String v){reportedBy=v;}
   public String getDisputeReason(){return disputeReason;} public void setDisputeReason(String v){disputeReason=v;}
   public Instant getScheduledAt(){return scheduledAt;} public void setScheduledAt(Instant v){scheduledAt=v;}
+  public int getRound(){return round;} public void setRound(int v){round=v;}
+  public int getPosition(){return position;} public void setPosition(int v){position=v;}
 }

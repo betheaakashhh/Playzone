@@ -48,3 +48,21 @@ For development, create a normal user and promote its `role` field to `ADMIN` in
 
 ## Important product/compliance note
 The MVP does not implement collection of player entry fees or redistribution of a pooled cash pot. Before enabling any paid-entry/prize mechanics, obtain India-specific legal/compliance review for the exact game, tournament rules, funding source, payment flow, age/KYC requirements, and applicable online-gaming/payment rules.
+
+
+## V1.1 tournament engine
+
+- Admin-only tournament start action.
+- Automatic single-elimination bracket generation with byes.
+- Automatic winner advancement between rounds.
+- Player result reporting and dispute state.
+- Admin result verification.
+- Per-match XP/win/loss updates.
+- Evidence upload endpoint for PNG/JPEG/WebP up to 5 MB.
+- Match Center UI.
+
+### Evidence upload
+`POST /api/uploads/evidence` as authenticated multipart form field `file`.
+
+### Important
+Paid-entry and cash-prize functionality remains disabled by design until the exact tournament format and payment/prize model receive appropriate legal/compliance review.
