@@ -1,0 +1,55 @@
+services:
+
+  mongo:
+    image: mongo:8
+    restart: unless-stopped
+
+    ports:
+      - "27018:27017"
+
+    volumes:
+      - mongo_data:/data/db
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mongosh",
+          "--quiet",
+          "--eval",
+          "db.adminCommand('ping').ok"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: playzone-api
+
+    restart: unless-stopped
+
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/playzone
+
+      JWT_SECRET: change-this-to-a-long-random-secret-before-production
+
+      CORS_ALLOWED_ORIGINS: http://localhost:5173
+
+      PORT: 8080
+
+
+volumes:
+  mongo_data:
